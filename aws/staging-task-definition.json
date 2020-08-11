@@ -1,0 +1,22 @@
+{
+  "family": "STAGING-SERVICE-NAME",
+  "executionRoleArn": "AWS_EXECUTION_ROLE",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "STAGING-SERVICE-NAME",
+      "image": "AWS_CONTAINER_REGISTRY_URL",
+      "portMappings": [
+        {
+          "containerPort": 4000,
+          "hostPort": 4000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512"
+}
